@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.geraldeberhard.tugasthrlebaran.HomeFragment"
+        android:label="Beranda" >
+        <action
+            android:id="@+id/action_home_to_detail"
+            app:destination="@id/announcementDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/scheduleFragment"
+        android:name="com.geraldeberhard.tugasthrlebaran.ScheduleFragment"
+        android:label="Jadwal" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.geraldeberhard.tugasthrlebaran.ProfileFragment"
+        android:label="Profil" />
+
+    <fragment
+        android:id="@+id/announcementDetailFragment"
+        android:name="com.geraldeberhard.tugasthrlebaran.AnnouncementDetailFragment"
+        android:label="Detail Pengumuman" >
+        <argument
+            android:name="announcementId"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+
+</navigation>
